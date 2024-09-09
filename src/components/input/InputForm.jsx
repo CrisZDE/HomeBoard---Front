@@ -11,7 +11,8 @@ export const InputForm = forwardRef(({
     inputClassName,
     divInputClassName,
     error,
-    width = "100%" 
+    width = "100%",
+    ...rest
 }, ref) => {
 
     return (
@@ -39,6 +40,7 @@ export const InputForm = forwardRef(({
                         placeholder={placeholder}
                         ref={ref} 
                         onInput={onInput}
+                        {...rest}
                     />
                 )}
             </div>
