@@ -3,7 +3,7 @@ export const BASE_URL = "http://localhost:3001";
 //public endpoints
 export const PUBLIC_URL = `${BASE_URL}/auth`;
 export const LOGIN_URL = `${PUBLIC_URL}/login`;
-export const SINGIN_URL = `${PUBLIC_URL}/singin`;
+export const SINGIN_URL = `${PUBLIC_URL}/signin`;
 
 //private endpoints 
 export const PRIVATE_URL = `${BASE_URL}/api`;
