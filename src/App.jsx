@@ -2,12 +2,13 @@ import React from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes';
 import './App.css'
+import { IdeasProvider } from './context/IdeasContext';
 
 function App() {
   return (
-    <React.StrictMode>
+    <IdeasProvider>
       <RouterProvider router={router}/>
-    </React.StrictMode>
+    </IdeasProvider>
   )
 }
 export default App

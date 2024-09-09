@@ -8,6 +8,7 @@ import { Idea } from "../pages/Idea";
 import { Create } from "../pages/Create";
 import { Save } from "../pages/Save";
 import { Edit } from "../pages/Edit";
+import { PrivateRoutes } from "./PrivateRoutes";
 
 export const router = createBrowserRouter ([
 
@@ -16,35 +17,56 @@ export const router = createBrowserRouter ([
         element: <Login/>
     },
     {
-        path: "/singin",
+        path: "/signin",
         element: <SigIn/>
     },
     {
         path: "/public",
-        element: <PublicDash/>
+        element:
+        <PrivateRoutes>
+            <PublicDash/>
+        </PrivateRoutes> 
     },
     {
         path: "/user",
-        element: <UserDash/>
+        element: 
+        <PrivateRoutes>
+            <UserDash/>
+        </PrivateRoutes> 
     },
     {
         path:"/board",
-        element: <Board/>
+        element: 
+        <PrivateRoutes>
+            <Board/>
+        </PrivateRoutes> 
     },
     {
         path:"/idea",
-        element: <Idea/>
+        element: 
+        <PrivateRoutes>
+            <Idea/>
+        </PrivateRoutes> 
     },
     {
         path:"/createform",
-        element: <Create/>
+        element:
+        <PrivateRoutes>
+            <Create/>
+        </PrivateRoutes> 
     },
     {
         path: "/saveform",
-        element: <Save/>
+        element: 
+        <PrivateRoutes>
+            <Save/>
+        </PrivateRoutes> 
     },
     {
         path:"/editform",
-        element: <Edit/>
+        element: 
+        <PrivateRoutes>
+            <Edit/>
+        </PrivateRoutes> 
     }
 ])

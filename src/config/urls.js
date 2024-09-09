@@ -7,8 +7,8 @@ export const SINGIN_URL = `${PUBLIC_URL}/singin`;
 
 //private endpoints 
 export const PRIVATE_URL = `${BASE_URL}/api`;
-export const GET_PUBLIC_IDEAS_URL = `${PRIVATE_UR}/public`;
-export const GET_BOARDS_URL = `${PRIVATE_UR}/board`;
+export const GET_PUBLIC_IDEAS_URL = `${PRIVATE_URL}/public`;
+export const GET_BOARDS_URL = `${PRIVATE_URL}/board`;
 export const getBoardByIdUrl = (id) => `${PRIVATE_URL}/board/${id}`;
 export const getUserIdeas =(userId, categoryId) => `${PRIVATE_URL}/user/${userId}/category/${categoryId}`;
 export const NEW_IDEA_URL = `${PRIVATE_URL}/idea`;
