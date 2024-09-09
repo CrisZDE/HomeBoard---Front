@@ -5,7 +5,7 @@ export const SigIn = () => {
     return (<>
     <div className="flex w-full h-screen">
     <div className="flex flex-col justify-center w-1/2 pl-16">
-        <img src="public/assets/LOGO_HB.svg" alt="Logo HomeBoard" className="h-[9rem] mb-8"/>
+        <img src="/assets/LOGO_HB.svg" alt="Logo HomeBoard" className="h-[9rem] mb-8"/>
         <SingInForm/>
     </div>
 
