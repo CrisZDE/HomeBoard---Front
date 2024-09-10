@@ -84,7 +84,6 @@ export const SingInForm = () => {
                     width="32.75rem"
                     bgColor="bg-olive"
                     textColor="text-light"
-                    ariaLabel="Entrar"
                     type="submit"
                     content="Entrar"
                 />

@@ -6,8 +6,7 @@ export const Button = ({width="100%", bgColor = "bg-olive", textColor = "text-li
         <button className={`h-[2.75rem] rounded-[5rem] bg-${bgColor} text-${textColor} font-bold cursor-pointer `}
         style={{ width }}
         type={type}
-        onClick={onClick}
-        aria-label={ariaLabel}>
+        onClick={onClick}>
             {content}
         </button>
     )

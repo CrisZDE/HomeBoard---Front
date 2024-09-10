@@ -9,7 +9,6 @@ export const UserDash = () => {
     <NavBar></NavBar>
     <Subtitle
     text="Nombre de usuario"
-    path="/public"
-    ariaLabel="Volver al Dashboard Público"/>
+    path="/public"/>
     </>)
 }
