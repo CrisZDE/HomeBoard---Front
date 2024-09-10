@@ -18,15 +18,16 @@ const handleClose = ()=>{
                 onClick={handleClose}
                 className="absolute right-7 top-7">
                 <img src="/assets/circulo-marca-x.svg" alt="Cerrar formulario" className="w-[2rem]" />
-            </button>
-            <h1 className="font-serif text-[2rem] mx-auto mb-8 ">Nueva Idea</h1>
-            <div className="flex flex-col mb-[1.5rem]">
-                <label className="text-dark font-sans font-bold mr-10 pb-[1.03rem]">Board: </label>
-                <select className="w-[46.25rem] h-[2.75rem] pl-4 rounded-[0.9rem] bg-green placeholder:text-dark placeholder:font-sans">
-                    <option value="">Selecciona una categoría</option>
-                    
-                </select>
-            </div>
+                </button>
+
+                <h1 className="font-serif text-[2rem] mx-auto mb-8 ">Nueva Idea</h1>
+                
+                <div className="flex flex-col mb-[1.5rem]">
+                    <label className="text-dark font-sans font-bold mr-10 pb-[1.03rem]">Board: </label>
+                    <select className="w-[46.25rem] h-[2.75rem] pl-4 rounded-[0.9rem] bg-green placeholder:text-dark placeholder:font-sans">
+                        <option value="">Selecciona una categoría</option>
+                    </select>
+                </div>
 
                 <InputForm 
                 label="Título: "
