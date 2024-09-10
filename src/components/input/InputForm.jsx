@@ -9,14 +9,13 @@ export const InputForm = forwardRef(({
     onInput,
     rows,
     inputClassName,
-    divInputClassName,
     error,
     width = "100%",
     ...rest
 }, ref) => {
 
     return (
-        <div className={`flex flex-col ${divInputClassName}`} style={{ width }}>
+        <div className={`flex flex-col`} style={{ width }}>
             <label
                 htmlFor={id}
                 className="text-dark font-sans font-bold pb-[1.03rem]" 
@@ -27,7 +26,7 @@ export const InputForm = forwardRef(({
                 {type === 'textarea' ? (
                     <textarea
                         id={id}
-                        className={`w-full h-24 p-2 rounded-[0.9rem] ${inputClassName}`}
+                        className={`w-full h-24 p-4 mb-[2.3rem] rounded-[0.9rem] bg-green placeholder:text-dark placeholder:font-sans ${inputClassName}`}
                         placeholder={placeholder}
                         rows={rows || 4}
                         ref={ref} 
