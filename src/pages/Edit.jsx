@@ -1,7 +1,8 @@
 import React from "react";
+import { EditIdeaForm } from "../components/forms/EditIdeaForm";
 
 export const Edit = () => {
     return (<>
-    <h1>Edit form</h1>
+    <EditIdeaForm/>
     </>)
 }

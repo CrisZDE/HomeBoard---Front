@@ -1,7 +1,10 @@
 import React from "react";
+import { SaveIdeaForm } from "../components/forms/SaveIdeaForm";
 
 export const Save = () => {
     return (<>
-    <h1>Save form</h1>
+    <div className="w-full min-h-screen bg-light flex justify-center">
+        <SaveIdeaForm/>
+    </div>
     </>)
 }

@@ -3,16 +3,14 @@ import { InputForm } from "../input/InputForm";
 import { Button } from "../buttons/Button";
 import { useNavigate } from "react-router-dom";
 
-export const NewIdeaForm = ()=> {
-const navigate = useNavigate();
+export const EditIdeaForm = () =>{
+    const navigate = useNavigate();
 
 const handleClose = ()=>{
     navigate('/board')
 };
-
-
     return(
-            <div className="relative flex flex-col items-center w-[84rem] mb-10 bg-[#ffffff] m-auto rounded-[0.9rem] my-10 py-10">  
+        <div className="relative flex flex-col items-center w-[84rem] mb-10 bg-[#ffffff] m-auto rounded-[0.9rem] my-10 py-10">  
                 <button
                 type="button"
                 onClick={handleClose}
@@ -20,7 +18,7 @@ const handleClose = ()=>{
                 <img src="/assets/circulo-marca-x.svg" alt="Cerrar formulario" className="w-[2rem]" />
                 </button>
 
-                <h1 className="font-serif text-[2rem] mx-auto mb-8 ">Nueva Idea</h1>
+                <h1 className="font-serif text-[2rem] mx-auto mb-8 ">Editando Idea</h1>
                 
                 <div className="flex flex-col mb-[1.5rem]">
                     <label className="text-dark font-sans font-bold mr-10 pb-[1.03rem]">Board: </label>
@@ -95,7 +93,5 @@ const handleClose = ()=>{
             
             </div>
 
-            
-        
     )
 }
