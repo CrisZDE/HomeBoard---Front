@@ -1,7 +1,10 @@
 import React from "react";
+import { NewIdeaForm } from "../components/forms/NewIdeaForm";
 
 export const Create = () => {
     return (<>
-    <h1>Create Form</h1>
+    <div className="w-full min-h-screen bg-light flex justify-center">
+    <NewIdeaForm/>
+    </div>
     </>)
 }
