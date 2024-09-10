@@ -16,7 +16,7 @@ export const UserDash = () => {
     <Subtitle
     text="Nombre de usuario"
     path="/public"/>
-    <div className="m-5 flex flex-wrap justify-between">
+    <div className="grid grid-cols-4 gap-5 m-5 ">
     {boards && boards.map(board => (
         <BoardCard
         board={board.category}
