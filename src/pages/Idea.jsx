@@ -4,7 +4,7 @@ import { Subtitle } from "../components/subtitle/Subtitle";
 import { IdeaCard } from "../components/board & idea/IdeaCard";
 
 export const Idea = () => {
-    return (<>
+    return (<div className="bg-light min-h-screen">
     <NavBar/>
     <Subtitle
     text="Título de Idea"
@@ -18,5 +18,5 @@ export const Idea = () => {
         url2="https://www.zarahome.com/"/>
     </div>
     
-    </>)
+    </div>)
 }

@@ -13,7 +13,7 @@ export const NavBar = () =>{
     };
 
     return(
-        <nav className="w-full h-20 ">
+        <nav className="w-full h-20 bg-[#FFFFFF]">
         <div className="max-w-[90rem] h-20 flex m-auto justify-between">
             <button onClick={() => navigate('/public')}>
                 <img src="/assets/Home.svg" alt="Home Imagen" className="w-[2.5rem] "/>
