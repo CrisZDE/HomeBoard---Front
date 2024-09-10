@@ -16,7 +16,7 @@ export const NavBar = () =>{
         <nav className="w-full h-20 ">
         <div className="max-w-[90rem] h-20 flex m-auto justify-between">
             <button onClick={() => navigate('/public')}>
-                <img src="/assets/Home.svg" alt="Home Imagen" className="w-[2.8rem] ml-10"/>
+                <img src="/assets/Home.svg" alt="Home Imagen" className="w-[2.8rem] "/>
             </button>
             <div className="flex relative items-center mx-5">
                 <img src="/assets/Search_Icon.svg" alt="Buscar" className=" absolute w-5 ml-5" />
