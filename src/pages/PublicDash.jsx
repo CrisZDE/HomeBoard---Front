@@ -1,7 +1,8 @@
 import React from "react";
+import { NavBar } from "../components/navbar/NavBar";
 
 export const PublicDash = () => {
     return (<>
-    <h1>Public Dashboard</h1>
+    <NavBar/>
     </>)
 }
