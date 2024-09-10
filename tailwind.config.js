@@ -17,7 +17,10 @@ export default {
         light: '#F3F6EF',
         terracota: '#DE6F57',
         grey: '#DFDAD4'
-      }
+      },
+      boxShadow: {
+        'custom-olive': '4px 4px 10px rgba(107, 114, 84, 0.5)', 
+      },
     },
   },
   plugins: [],

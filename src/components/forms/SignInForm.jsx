@@ -82,8 +82,8 @@ export const SingInForm = () => {
                 />
                 <Button 
                     width="32.75rem"
-                    bgColor="bg-olive"
-                    textColor="text-light"
+                    bgColor="olive"
+                    textColor="light"
                     type="submit"
                     content="Entrar"
                 />

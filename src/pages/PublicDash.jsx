@@ -13,6 +13,7 @@ export const PublicDash = () => {
         <PublicIdea/>
         <PublicIdea/>
         <PublicIdea/>
+        <PublicIdea/>
 
 
     </div>
