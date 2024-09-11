@@ -28,7 +28,7 @@ export const PublicDash = () => {
 
     return (<>
         <NavBar/>
-        <div className=" m-5 flex flex-wrap justify-between">
+        <div className=" grid grid-cols-6 gap-5 m-5">
 
             {publicIdeas.lenght === 0 ? (
                 <p>No hay ideas públicas aún</p>
