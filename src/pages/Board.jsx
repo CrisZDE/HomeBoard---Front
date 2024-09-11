@@ -9,23 +9,12 @@ export const Board = () => {
     <Subtitle
     text="Nombre del board"
     path="/user"/>
-    <div className=" my-5 mx-20 flex flex-wrap justify-between">
+    <div className="my-5 mx-20 grid grid-cols-3 gap-5 m-5">
         <IdeaOnBoard
         title="Lampara"
         note="asjdlaksj dñakls jdlkajsdl kñajs ñkl asjd lakjsd lkajsd lkjsd alkjs"
         />
-        <IdeaOnBoard
-        title="Lampara"
-        note="asjdlaksj dñakls jdlkajsdl kñajs ñkl asjd lakjsd lkajsd lkjsd alkjs"
-        />
-        <IdeaOnBoard
-        title="Lampara"
-        note="asjdlaksj dñakls jdlkajsdl kñajs ñkl asjd lakjsd lkajsd lkjsd alkjs"
-        />
-        <IdeaOnBoard
-        title="Lampara"
-        note="asjdlaksj dñakls jdlkajsdl kñajs ñkl asjd lakjsd lkajsd lkjsd alkjs"
-        />
+        
     </div>
     
     </>)
