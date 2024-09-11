@@ -1,29 +1,51 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavBar } from "../components/navbar/NavBar";
 import { Subtitle } from "../components/subtitle/Subtitle";
-import { BoardCard } from "../components/board & idea/BoardCard";
 import { IdeasContext } from "../context/IdeasContext";
+import { IdeaOnBoard } from "../components/board & idea/IdeaOnBoardCard";
 
 export const UserDash = () => {
-    const {boards, fetchBoards} = useContext(IdeasContext);
+    const {userIdeas, fetchUserIdeas} = useContext(IdeasContext);
+    const [ideas, setIdeas] = useState([]);
+    const [error, setError] = useState(null);
     
-    useEffect(()=>{
-        fetchBoards();
-    }, [])
+
+    useEffect(() => {
+        const fetchIdeas = async () => {
+            try {
+                await fetchUserIdeas();
+
+            }catch (error) {
+                console.error('Error al obtener las ideas del usuario:', error);
+                setError("Error al obtener las ideas.");
+        };
+    }
+    fetchIdeas();
+    }, [fetchUserIdeas]);
+
+
+    if (error) return <p>{error}</p>;
+
 
     return (<>
-    <NavBar></NavBar>
-    <Subtitle
-    text="Nombre de usuario"
-    path="/public"/>
-    <div className="grid grid-cols-4 gap-5 m-5 ">
-    {boards && boards.map(board => (
-        <BoardCard
-        board={board.category}
-        imgSrc=""/>
-    ))}
-    
-        
-    </div>
+        <NavBar></NavBar>
+        <Subtitle
+        text="Nombre de usuario"
+        path="/public"/>
+            <div className="my-5 mx-20 grid grid-cols-3 gap-5 m-5">
+            {userIdeas.length > 0 ? (
+                        userIdeas.map((idea) => (
+                            <IdeaOnBoard
+                                key={idea.id}
+                                title={idea.title}
+                                note={idea.notes}
+                                img={idea.img} // Si `IdeaOnBoard` tiene imagen
+                            />
+                        ))
+                    ) : (
+                        <p>No hay ideas disponibles</p>
+                    )}
+            
+        </div>
     </>)
 }

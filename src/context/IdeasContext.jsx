@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { GET_PUBLIC_IDEAS_URL, GET_BOARDS_URL, getUserIdeas} from "../config/urls";
+import { GET_PUBLIC_IDEAS_URL, GET_BOARDS_URL, getOnlyUserIdeas} from "../config/urls";
 import { apiRequest } from "../services/apiRequest";
 import { AuthContext } from "../auth/AuthProvider";
 
@@ -29,7 +29,7 @@ export const IdeasProvider = ({ children }) => {
         try {
             const userId = localStorage.getItem("userId");
             const headers = { Authorization: `Bearer ${authToken}` };
-            const data = await apiRequest(getUserIdeas(userId, categoryId), 'GET', null, headers);
+            const data = await apiRequest(getOnlyUserIdeas(userId, categoryId), 'GET', null, headers);
             setUserideas(data);
         }catch (error){
             console.error("Error fetching user ideas:", error);
