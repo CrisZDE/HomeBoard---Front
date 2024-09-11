@@ -1,11 +1,11 @@
-import React from "react";
-import { forwardRef } from "react";
+import React, { forwardRef } from 'react';
 
 export const InputForm = forwardRef(({
     id,
     label,
     type = "text",
     placeholder,
+    accept,
     onInput,
     rows,
     inputClassName,
@@ -13,12 +13,11 @@ export const InputForm = forwardRef(({
     width = "100%",
     ...rest
 }, ref) => {
-
     return (
         <div className={`flex flex-col`} style={{ width }}>
             <label
                 htmlFor={id}
-                className="text-dark font-sans font-bold pb-[1.03rem]" 
+                className="text-dark font-sans font-bold pb-[1.03rem]"
             >
                 {label}
             </label>
@@ -30,6 +29,7 @@ export const InputForm = forwardRef(({
                         placeholder={placeholder}
                         rows={rows || 4}
                         ref={ref} 
+                        {...rest}
                     />
                 ) : (
                     <input
@@ -37,6 +37,7 @@ export const InputForm = forwardRef(({
                         type={type}
                         className={`w-full h-[2.75rem] pl-4 mb-[2.3rem] rounded-[0.9rem] bg-green placeholder:text-dark placeholder:font-sans ${inputClassName}`}
                         placeholder={placeholder}
+                        accept={accept}
                         ref={ref} 
                         onInput={onInput}
                         {...rest}

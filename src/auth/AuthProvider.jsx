@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
         const storedToken = localStorage.getItem('authToken');
 
         if (storedUser) setUser(JSON.parse(storedUser));
+        console.log('Stored User:', JSON.parse(storedUser));
         if (storedToken) setAuthToken(storedToken);
     }, []);
 
@@ -26,6 +27,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('userId', updatedUserData.id); 
         localStorage.setItem('user', JSON.stringify(updatedUserData));
         localStorage.setItem('authToken', token);
+        
     };
 
     const logout = () => {
