@@ -5,7 +5,7 @@ export const IdeaCard = ({notes, imgSrc, imgAlt, url, url2})=> {
     const navigate = useNavigate();
 
     return(
-        <div className="w-[90rem] h-[43rem] rounded-[0.9rem] shadow-custom-olive flex justify-bet m-auto">
+        <div className="w-[90rem] h-[43rem] rounded-[0.9rem] shadow-custom-olive flex justify-bet m-auto bg-[#FFFFFF]">
             <div className="bg-light w-[50rem] h-full rounded-[0.9rem] overflow-hidden flex items-center justify-center">
                 <img 
                     src={imgSrc}
